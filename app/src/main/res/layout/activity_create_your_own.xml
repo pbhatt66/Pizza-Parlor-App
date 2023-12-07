@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#eadac0"
+              android:orientation="vertical"
+              android:weightSum="2">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Customize Your Pizza"
+            android:ems="10"
+            android:textSize="30sp"
+            android:fontFamily="serif"
+            android:background="#c32105"
+            android:textColor="#ffffff"
+            android:id="@+id/specialtypizzaactivitytitle"/>
+    <Button
+            android:id="@+id/backtomain_button"
+            android:text="Back to Main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#ae7a47"
+            android:layout_gravity="center"/>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+        <com.google.android.material.chip.ChipGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sausage"
+                    android:id="@+id/sausage"
+                    android:layout_marginLeft="40dp"/>
+            <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pepperoni"
+                    android:id="@+id/pepperoni"/>
+            <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ham"
+                    android:id="@+id/ham"/>
+            <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Beef"
+                    android:id="@+id/beef"/>
+            <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shrimp"
+                    android:id="@+id/shrimp"
+                    android:layout_marginStart="70dp"/>
+            <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Squid"
+                    android:id="@+id/squid"/>
+            <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Crab Meats"
+                    android:id="@+id/crabmeats"/>
+            <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Green Pepper"
+                    android:id="@+id/greenpepper"
+                    android:layout_marginLeft="50dp"/>
+            <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Onion"
+                    android:id="@+id/onion"/>
+            <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mushroom"
+                    android:id="@+id/Mushroom"/>
+            <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Black Olive"
+                    android:id="@+id/blackolive"
+                    android:layout_marginLeft="50dp"/>
+            <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jalepeno"
+                    android:id="@+id/jalepeno"/>
+            <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pineapple"
+                    android:id="@+id/pineapple"/>
+        </com.google.android.material.chip.ChipGroup>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2" android:baselineAligned="true">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="242dp"
+                android:layout_weight="1">
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="244dp">
+                <TextView
+                        android:text="Size"
+                        android:textSize="30sp"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content" android:id="@+id/textView3"
+                        android:layout_gravity="center"/>
+                <RadioButton
+                        android:text="Small"
+                        android:textSize="20sp"
+                        android:layout_width="175dp"
+                        android:layout_height="45dp" android:id="@+id/size_small"
+                        android:layout_gravity="center"/>
+                <RadioButton
+                        android:text="Medium"
+                        android:textSize="20sp"
+                        android:layout_width="175dp"
+                        android:layout_height="45dp" android:id="@+id/size_medium"
+                        android:layout_gravity="center"/>
+                <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="183dp">
+                    <RadioButton
+                            android:text="Large"
+                            android:textSize="20sp"
+                            android:layout_width="175dp"
+                            android:layout_height="45dp" android:id="@+id/size_large"
+                            android:layout_gravity="center"/>
+                </RadioGroup>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="241dp"
+                android:layout_weight="1">
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="241dp">
+                <TextView
+                        android:text="Sauce"
+                        android:textSize="30sp"
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content" android:id="@+id/textView"
+                        android:layout_gravity="center"/>
+                <RadioButton
+                        android:text="Tomato"
+                        android:textSize="20sp"
+                        android:layout_width="175dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:id="@+id/tomato"/>
+                <RadioButton
+                        android:text="Alfredo"
+                        android:textSize="20sp"
+                        android:layout_width="175dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:id="@+id/alfredo"/>
+                <CheckBox
+                        android:text="Extra Cheese"
+                        android:textSize="20sp"
+                        android:layout_width="175dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:id="@+id/extra_cheese"/>
+                <CheckBox
+                        android:text="Extra Sauce"
+                        android:textSize="20sp"
+                        android:layout_width="175dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:id="@+id/extra_sauce"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="205dp">
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="83dp"
+                    android:layout_marginTop="10dp">
+                <TextView
+                        android:text="Price = "
+                        android:textSize="45dp"
+                        android:layout_width="109dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_height="wrap_content" android:id="@+id/textView4" android:layout_weight="1"/>
+                <TextView
+                        android:text="[$--.--]"
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="45dp"
+                        android:inputType="numberDecimal"
+                        android:ems="10"
+                        android:layout_marginRight="20dp"
+                        android:textAlignment="center"
+                        android:id="@+id/printPrice" android:layout_weight="1"/>
+            </LinearLayout>
+            <Button
+                    android:text="Add to Order"
+                    android:layout_width="234dp"
+                    android:layout_height="91dp" android:id="@+id/button2"
+                    android:layout_gravity="center"/>
+        </LinearLayout>
+        <Button
+                android:text="Order Added!"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_success"
+                android:backgroundTint="#4BB543"
+                android:onClick="showToast"/>
+    </LinearLayout>
+
+</LinearLayout>

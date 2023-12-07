@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#eadac0"
+              android:orientation="vertical"
+              android:weightSum="2">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2" android:baselineAligned="false">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+            <Button
+                    android:id="@+id/specialtypizzas_button"
+                    android:layout_width="180dp"
+                    android:layout_height="300dp"
+                    android:backgroundTint="#740005"
+                    android:text="button1"
+                    android:layout_centerInParent="true"/>
+            <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp" app:srcCompat="@drawable/specialtypizzas"
+                    android:id="@+id/specialtypizzas_image"
+                    android:layout_centerInParent="true"/>
+            <TextView
+                    android:id="@+id/specialtypizzas_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:text="Specialty Pizzas"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:fontFamily="serif"
+                    android:textColor="#ffffff"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+            <Button
+                    android:id="@+id/buildyourown_button"
+                    android:layout_width="180dp"
+                    android:layout_height="300dp"
+                    android:backgroundTint="#c32105"
+                    android:text="button2"
+                    android:layout_centerInParent="true"/>
+            <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp" app:srcCompat="@drawable/createyourownpizza"
+                    android:id="@+id/buildyourown_image"
+                    android:layout_centerInParent="true"/>
+            <TextView
+                    android:id="@+id/buildyourown_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:text="Create Your Own"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:fontFamily="serif"
+                    android:textColor="#ffffff"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="RU Pizza"
+            android:ems="10"
+            android:textSize="40sp"
+            android:fontFamily="serif"
+            android:textColor="#ae7a47"
+            android:id="@+id/mainactivitytitle"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2" android:baselineAligned="false">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+            <Button
+                    android:id="@+id/currentorder_button"
+                    android:layout_width="180dp"
+                    android:layout_height="300dp"
+                    android:layout_centerInParent="true"
+                    android:text="button3"
+                    android:backgroundTint= "#807e2a"/>
+            <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp" app:srcCompat="@drawable/currentorder"
+                    android:id="@+id/currentorder_image"
+                    android:layout_centerInParent="true"/>
+            <TextView
+                    android:id="@+id/currentorder_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="215dp"
+                    android:text="Current Order"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:fontFamily="serif"
+                    android:textColor="#ffffff"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+            <Button
+                    android:id="@+id/storeorders_button"
+                    android:layout_width="180dp"
+                    android:layout_height="300dp"
+                    android:backgroundTint="#444801"
+                    android:text="button4"
+                    android:layout_centerInParent="true"/>
+            <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp" app:srcCompat="@drawable/storeorders"
+                    android:id="@+id/storeorders_image"
+                    android:layout_centerInParent="true"/>
+            <TextView
+                    android:id="@+id/storeorders_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="215dp"
+                    android:text="Store Orders"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:fontFamily="serif"
+                    android:textColor="#ffffff"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>
