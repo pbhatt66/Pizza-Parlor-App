@@ -82,25 +82,4 @@ public class StoreOrders {
     public void removeFromOrders(Order order) {
         orders.remove(order);
     }
-
-    /**
-     * Exports Orders to txt file.
-     */
-    public void exportOrders() {
-        try (PrintWriter writer = new PrintWriter("store_orders.txt")) {
-            for (Order order : orders) {
-                writer.println("Order Number: " + order.getOrderNumber());
-                writer.println("Pizzas:");
-                for (Pizza pizza : order.getPizzas()) {
-                    writer.println(pizza.toString());
-                }
-                writer.println("Subtotal: " + String.format("$%.2f", order.calculateSubTotal()));
-                writer.println("Tax: " + String.format("$%.2f", order.calculateTax()));
-                writer.println("Total: " + String.format("$%.2f", order.calculateTotal()));
-                writer.println();
-            }
-        } catch (Exception e) {
-            System.out.println("Error exporting store orders");
-        }
-    }
 }
