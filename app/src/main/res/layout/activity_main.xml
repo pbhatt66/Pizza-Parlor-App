@@ -30,15 +30,17 @@
                     android:layout_height="150dp" app:srcCompat="@drawable/specialtypizzas"
                     android:id="@+id/specialtypizzas_image"
                     android:layout_centerInParent="true"/>
+
             <TextView
-                    android:id="@+id/specialtypizzas_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:text="Specialty Pizzas"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:fontFamily="serif"
-                    android:textColor="#ffffff"/>
+                android:id="@+id/specialtypizzas_text"
+                android:layout_width="match_parent"
+                android:layout_height="93dp"
+                android:paddingTop="30dp"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text="Specialty Pizzas"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
 
         </RelativeLayout>
 
@@ -59,15 +61,17 @@
                     android:layout_height="150dp" app:srcCompat="@drawable/createyourownpizza"
                     android:id="@+id/buildyourown_image"
                     android:layout_centerInParent="true"/>
+
             <TextView
-                    android:id="@+id/buildyourown_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:text="Create Your Own"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:fontFamily="serif"
-                    android:textColor="#ffffff"/>
+                android:id="@+id/buildyourown_text"
+                android:layout_width="198dp"
+                android:layout_height="93dp"
+                android:paddingTop="30dp"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text="Create Your Own"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
 
         </RelativeLayout>
 
@@ -108,15 +112,17 @@
                     android:layout_height="150dp" app:srcCompat="@drawable/currentorder"
                     android:id="@+id/currentorder_image"
                     android:layout_centerInParent="true"/>
+
             <TextView
-                    android:id="@+id/currentorder_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="215dp"
-                    android:text="Current Order"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:fontFamily="serif"
-                    android:textColor="#ffffff"/>
+                android:id="@+id/currentorder_text"
+                android:layout_width="match_parent"
+                android:layout_height="83dp"
+                android:paddingTop="30dp"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text="Current Order"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
 
         </RelativeLayout>
 
@@ -138,15 +144,17 @@
                     android:layout_height="150dp" app:srcCompat="@drawable/storeorders"
                     android:id="@+id/storeorders_image"
                     android:layout_centerInParent="true"/>
+
             <TextView
-                    android:id="@+id/storeorders_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="215dp"
-                    android:text="Store Orders"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:fontFamily="serif"
-                    android:textColor="#ffffff"/>
+                android:id="@+id/storeorders_text"
+                android:layout_width="match_parent"
+                android:layout_height="83dp"
+                android:paddingTop="30dp"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text="Store Orders"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
 
         </RelativeLayout>
 

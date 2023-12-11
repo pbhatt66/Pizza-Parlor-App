@@ -14,16 +14,29 @@
         <item>Vegetarian</item>
     </string-array>
 
-    <string-array name="description">
-        <item>This is a description</item>
-        <item>This is a description</item>
-        <item>This is a description</item>
-        <item>This is a description</item>
-        <item>This is a description</item>
-        <item>This is a description</item>
-        <item>This is a description</item>
-        <item>This is a description</item>
-        <item>This is a description</item>
-        <item>This is a description</item>
+    <string-array name="toppings">
+        <item>Black Olive, Crab Meats, Pineapple</item>
+        <item>Green Pepper, Onion, Jalapeno, Beef</item>
+        <item>Sausage, Pepperoni, Green Pepper, Onion, Mushroom</item>
+        <item>Ham, Pineapple</item>
+        <item>Sausage, Pepperoni, Beef, Ham</item>
+        <item>Pepperoni</item>
+        <item>Shrimp, Squid, Crab Meats</item>
+        <item>Sausage, Pepperoni, Ham, Green Pepper, Onion, Black Olive, Mushroom</item>
+        <item>Squid, Beef, Shrimp, Sausage</item>
+        <item>Green Pepper, Onion, Mushroom, Black Olive, Jalapeno</item>
+    </string-array>
+
+    <string-array name="sauces">
+        <item>Tomato</item>
+        <item>Tomato</item>
+        <item>Tomato</item>
+        <item>Tomato</item>
+        <item>Tomato</item>
+        <item>Tomato</item>
+        <item>Alfredo</item>
+        <item>Tomato</item>
+        <item>Alfredo</item>
+        <item>Tomato</item>
     </string-array>
 </resources>

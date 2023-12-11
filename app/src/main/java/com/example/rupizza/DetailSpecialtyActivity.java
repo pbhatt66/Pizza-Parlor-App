@@ -14,13 +14,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class DetailSpecialtyActivity extends AppCompatActivity {
     ImageView pageImageView;
-    TextView pagePizzaTitle, pagePizzaToppings, priceTextView;
+    TextView pagePizzaTitle, pagePizzaToppings, pagePizzaSauce, priceTextView;
 
     CheckBox extraCheeseCheckBox, extraSauceCheckBox;
 
     Button addToOrderButton;
 
-    String pizzaName, pizzaDescription;
+    String pizzaName, pizzaToppings, pizzaSauce;
     int pizzaImage;
 
 
@@ -34,6 +34,7 @@ public class DetailSpecialtyActivity extends AppCompatActivity {
 
         pageImageView = findViewById(R.id.pageImageView);
         pagePizzaTitle = findViewById(R.id.pagePizzaTitle);
+        pagePizzaSauce = findViewById(R.id.pagePizzaSauce);
         pagePizzaToppings = findViewById(R.id.pagePizzaToppings);
 
         Button back_to_main = findViewById(R.id.backtomain_button);
@@ -63,7 +64,8 @@ public class DetailSpecialtyActivity extends AppCompatActivity {
     private void getData() {
         if (getIntent().hasExtra("pizzaName") && getIntent().hasExtra("pizzaDescription") && getIntent().hasExtra("pizzaImage")) {
             pizzaName = getIntent().getStringExtra("pizzaName");
-            pizzaDescription = getIntent().getStringExtra("pizzaDescription");
+            pizzaToppings = getIntent().getStringExtra("pizzaDescription");
+            pizzaSauce = getIntent().getStringExtra("pizzaSauce");
             pizzaImage = getIntent().getIntExtra("pizzaImage", 1);
         }
         else {
@@ -73,7 +75,8 @@ public class DetailSpecialtyActivity extends AppCompatActivity {
 
     private void setData() {
         pagePizzaTitle.setText(pizzaName);
-        pagePizzaToppings.setText(pizzaDescription);
+        pagePizzaToppings.setText(pizzaToppings);
+        pagePizzaSauce.setText(pizzaSauce);
         pageImageView.setImageResource(pizzaImage);
 
     }
@@ -85,7 +88,6 @@ public class DetailSpecialtyActivity extends AppCompatActivity {
 
     private void updatePrice() {
         Pizza pizza = PizzaMaker.createPizza(pizzaName);
-        // get size from radio button
         RadioButton selectedRadioButton = (RadioButton) findViewById(R.id.specialty_size_radio_group).findViewById(((RadioGroup) findViewById(R.id.specialty_size_radio_group)).getCheckedRadioButtonId());
         if (selectedRadioButton != null) {
             String selectedSize = selectedRadioButton.getText().toString();
@@ -97,23 +99,19 @@ public class DetailSpecialtyActivity extends AppCompatActivity {
             }
             pizza.setSize(tempSize);
         }
-        // check if extra cheese is selected
         extraCheeseCheckBox = findViewById(R.id.specialty_extra_cheese);
         if (extraCheeseCheckBox.isChecked()) {
             pizza.addExtraCheese();
         }
-        // check if extra sauce is selected
         extraSauceCheckBox = findViewById(R.id.specialty_extra_sauce);
         if (extraSauceCheckBox.isChecked()) {
             pizza.addExtraSauce();
         }
-        // update price
         priceTextView = findViewById(R.id.specialtyPizzaPrice);
         priceTextView.setText(String.format("$%.2f", pizza.price()));
     }
 
     private void handleOrderButtonAction() {
-        // get size from radio button
         RadioButton selectedRadioButton = (RadioButton) findViewById(R.id.specialty_size_radio_group).findViewById(((RadioGroup) findViewById(R.id.specialty_size_radio_group)).getCheckedRadioButtonId());
         String selectedSize = selectedRadioButton.getText().toString();
         Size size = null;
@@ -122,15 +120,12 @@ public class DetailSpecialtyActivity extends AppCompatActivity {
             case "Medium" -> size = Size.MEDIUM;
             case "Large" -> size = Size.LARGE;
         }
-        // check if extra cheese is selected
         extraCheeseCheckBox = findViewById(R.id.specialty_extra_cheese);
         boolean extraCheese = extraCheeseCheckBox.isChecked();
 
-        // check if extra sauce is selected
         extraSauceCheckBox = findViewById(R.id.specialty_extra_sauce);
         boolean extraSauce = extraSauceCheckBox.isChecked();
 
-        // create pizza object
         Pizza pizza = PizzaMaker.createPizza(pizzaName);
         pizza.setSize(size);
         if (extraCheese) {
@@ -139,7 +134,6 @@ public class DetailSpecialtyActivity extends AppCompatActivity {
         if (extraSauce) {
             pizza.addExtraSauce();
         }
-        // add pizza to order
         Order currentOrder = storeOrders.getCurrentOrder();
         if (currentOrder != null) {
             currentOrder.addToOrder(pizza);
@@ -148,7 +142,6 @@ public class DetailSpecialtyActivity extends AppCompatActivity {
             storeOrders.startNewOrder();
             storeOrders.getCurrentOrder().addToOrder(pizza);
         }
-        // alert user that pizza was added to order
         Toast.makeText(this, "Pizza added to order", Toast.LENGTH_SHORT).show();
         // return to main activity
         Intent intent = new Intent(this, MainActivity.class);
@@ -175,7 +168,6 @@ public class DetailSpecialtyActivity extends AppCompatActivity {
 //    }
 
     private void keyReleasedProperty() {
-        // enable the add to cart button if a size is selected
         findViewById(R.id.specialtyAddToOrderButton).setEnabled(true);
     }
 }
