@@ -17,7 +17,7 @@ public enum Topping {
     SHRIMP("Shrimp"),
     SQUID("Squid"),
     CRAB_MEATS("Crab Meats"),
-    JALAPENO("Jalapeno"),
+    JALEPENO("Jalepeno"),
     PINEAPPLE("Pineapple");
 
     private String name;

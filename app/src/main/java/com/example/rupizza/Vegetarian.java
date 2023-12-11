@@ -18,7 +18,7 @@ public class Vegetarian extends Pizza {
         toppings.add(Topping.ONION);
         toppings.add(Topping.MUSHROOM);
         toppings.add(Topping.BLACK_OLIVE);
-        toppings.add(Topping.JALAPENO);
+        toppings.add(Topping.JALEPENO);
     }
 
     /**

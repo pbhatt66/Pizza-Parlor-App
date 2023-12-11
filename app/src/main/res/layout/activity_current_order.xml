@@ -17,13 +17,6 @@
             android:background="#807e2a"
             android:textColor="#ffffff"
             android:id="@+id/specialtypizzaactivitytitle"/>
-    <Button
-            android:id="@+id/backtomain_button"
-            android:text="Back to Main"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#ae7a47"
-            android:layout_gravity="center"/>
 
     <LinearLayout
             android:orientation="horizontal"
@@ -35,6 +28,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="25dp"
                 android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
                 android:id="@+id/textView1" android:layout_weight="1"/>
         <TextView
                 android:layout_width="173dp"
@@ -42,6 +36,7 @@
                 android:ems="10"
                 android:textSize="25sp"
                 android:layout_marginEnd="25dp"
+            android:layout_marginTop="10dp"
                 android:id="@+id/orderNumber" android:layout_weight="1"/>
     </LinearLayout>
     <ListView
@@ -104,24 +99,46 @@
                     android:layout_marginEnd="10dp"
                     android:id="@+id/total" android:layout_weight="1"/>
         </LinearLayout>
+
         <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:orientation="horizontal">
+
             <Button
-                    android:text="Remove Pizza"
-                    android:layout_width="wrap_content"
-                    android:layout_height="120dp"
-                    android:backgroundTint="#740005"
-                    android:layout_marginRight="10dp"
-                    android:id="@+id/removepizza_button" android:layout_weight="1"/>
+                android:id="@+id/removepizza_button"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:backgroundTint="#740005"
+                android:text="Remove Pizza" />
+
             <Button
-                    android:text="Place Order"
-                    android:layout_width="wrap_content"
-                    android:layout_height="120dp"
-                    android:backgroundTint="#444801"
-                    android:layout_marginLeft="10dp"
-                    android:id="@+id/placeorder_button" android:layout_weight="1"/>
+                android:id="@+id/placeorder_button"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:backgroundTint="#444801"
+                android:text="Place Order" />
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/backtomain_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="#ae7a47"
+                android:text="Back to Main" />
+        </LinearLayout>
+
     </LinearLayout>
 </LinearLayout>
