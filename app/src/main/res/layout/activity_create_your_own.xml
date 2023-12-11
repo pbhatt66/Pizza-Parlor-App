@@ -123,142 +123,162 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="250dp">
+
         <com.google.android.material.chip.ChipGroup
-                android:id="@+id/customize_toppings_group"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="10dp">
+            android:id="@+id/customize_toppings_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp">
 
             <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sausage"
-                    android:id="@+id/sausage"
-                    style="@style/Widget.MaterialComponents.Chip.Filter"
-                    android:layout_marginLeft="40dp"/>
+                android:id="@+id/sausage"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="Sausage" />
+
             <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Chip.Filter"
-                    android:text="Pepperoni"
-                    android:id="@+id/pepperoni"/>
+                android:id="@+id/pepperoni"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pepperoni" />
+
             <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Chip.Filter"
-                    android:text="Ham"
-                    android:id="@+id/ham"/>
+                android:id="@+id/ham"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ham" />
+
             <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Chip.Filter"
-                    android:text="Beef"
-                    android:id="@+id/beef"/>
+                android:id="@+id/beef"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Beef" />
+
             <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Chip.Filter"
-                    android:text="Shrimp"
-                    android:id="@+id/shrimp"
-                    android:layout_marginStart="70dp"/>
+                android:id="@+id/shrimp"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:text="Shrimp" />
+
             <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Chip.Filter"
-                    android:text="Squid"
-                    android:id="@+id/squid"/>
+                android:id="@+id/squid"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Squid" />
+
             <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Chip.Filter"
-                    android:text="Crab Meats"
-                    android:id="@+id/crabmeats"/>
+                android:id="@+id/crabmeats"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crab Meats" />
+
             <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Chip.Filter"
-                    android:text="Green Pepper"
-                    android:id="@+id/greenpepper"
-                    android:layout_marginLeft="50dp"/>
+                android:id="@+id/greenpepper"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="Green Pepper" />
+
             <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Chip.Filter"
-                    android:text="Onion"
-                    android:id="@+id/onion"/>
+                android:id="@+id/onion"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Onion" />
+
             <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Chip.Filter"
-                    android:text="Mushroom"
-                    android:id="@+id/Mushroom"/>
+                android:id="@+id/Mushroom"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mushroom" />
+
             <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Chip.Filter"
-                    android:text="Black Olive"
-                    android:id="@+id/blackolive"
-                    android:layout_marginLeft="50dp"/>
+                android:id="@+id/blackolive"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="Black Olive" />
+
             <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Chip.Filter"
-                    android:text="Jalepeno"
-                    android:id="@+id/jalepeno"/>
+                android:id="@+id/jalepeno"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jalepeno" />
+
             <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Chip.Filter"
-                    android:text="Pineapple"
-                    android:id="@+id/pineapple"/>
+                android:id="@+id/pineapple"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pineapple" />
         </com.google.android.material.chip.ChipGroup>
     </LinearLayout>
 
     <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="202dp"
+        android:orientation="vertical">
+
         <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="205dp">
+            android:layout_width="match_parent"
+            android:layout_height="205dp"
+            android:orientation="vertical">
+
             <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="83dp"
-                    android:layout_marginTop="10dp">
+                android:layout_width="match_parent"
+                android:layout_height="83dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
                 <TextView
-                        android:text="Price = "
-                        android:textSize="45dp"
-                        android:layout_width="109dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_height="wrap_content" android:id="@+id/textView4" android:layout_weight="1"/>
+                    android:id="@+id/textView4"
+                    android:layout_width="109dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:text="Price = "
+                    android:textSize="45dp" />
+
                 <TextView
-                        android:text=""
-                        android:layout_width="175dp"
-                        android:layout_height="wrap_content"
-                        android:textSize="45dp"
-                        android:ems="10"
-                        android:layout_marginRight="20dp"
-                        android:textAlignment="center"
-                        android:id="@+id/customPrice" android:layout_weight="1"/>
+                    android:id="@+id/customPrice"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textSize="45dp" />
             </LinearLayout>
 
             <Button
-                    android:id="@+id/customizeAddToOrderButton"
-                    android:layout_width="178dp"
-                    android:layout_height="64dp"
-                    android:layout_gravity="center"
-                    android:enabled="false"
-                    android:text="Add to Order" />
+                android:id="@+id/customizeAddToOrderButton"
+                android:layout_width="178dp"
+                android:layout_height="64dp"
+                android:layout_gravity="center"
+                android:enabled="false"
+                android:text="Add to Order" />
 
             <Button
-                    android:id="@+id/backtomain_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:backgroundTint="#ae7a47"
-                    android:text="Back to Main" />
+                android:id="@+id/backtomain_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="#ae7a47"
+                android:text="Back to Main" />
         </LinearLayout>
     </LinearLayout>
 

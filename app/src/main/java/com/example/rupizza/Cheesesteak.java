@@ -16,12 +16,12 @@ public class Cheesesteak extends Pizza {
         this.sauce = Sauce.TOMATO;
         toppings.add(Topping.GREEN_PEPPER);
         toppings.add(Topping.ONION);
-        toppings.add(Topping.JALAPENO);
+        toppings.add(Topping.JALEPENO);
         toppings.add(Topping.BEEF);
     }
 
     /**
-     * Returns the price of pizza based on user selection.
+     * Returns the price of pizza based on user sel ection.
      * @return price
      */
     @Override

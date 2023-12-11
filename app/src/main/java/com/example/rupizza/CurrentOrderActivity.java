@@ -7,6 +7,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +36,9 @@ public class CurrentOrderActivity extends AppCompatActivity {
 
         Button remove_pizza = findViewById(R.id.removepizza_button);
         remove_pizza.setOnClickListener(v -> handleRemovePizzaButtonAction());
+
+        Button place_order = findViewById(R.id.placeorder_button);
+        place_order.setOnClickListener(v -> handlePlaceOrderButtonAction());
     }
 
     public void openMainActivity() {
@@ -75,5 +79,19 @@ public class CurrentOrderActivity extends AppCompatActivity {
             adapter.notifyDataSetChanged();
         }
         updateOrderInfo();
+    }
+
+    private void handlePlaceOrderButtonAction() {
+        Order currentOrder = storeOrders.getCurrentOrder();
+        if (currentOrder != null && !currentOrder.getPizzas().isEmpty()) {
+            storeOrders.startNewOrder();
+            updateOrderInfo();
+            // alert user via Toast that order has been placed
+            Toast toast = Toast.makeText(getApplicationContext(), "Order has been placed!", Toast.LENGTH_SHORT);
+            toast.show();
+            // return to main activity
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
     }
 }
