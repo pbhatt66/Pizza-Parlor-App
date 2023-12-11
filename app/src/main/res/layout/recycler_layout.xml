@@ -5,10 +5,12 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:layout_margin="10dp"
+        android:padding="16dp"
+        android:id="@+id/mainLayout">
 
     <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/pizzaImageView"
             android:layout_width="150dp"
             android:layout_height="100dp"
             android:src="@drawable/deluxepizza"
@@ -23,7 +25,7 @@
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/pizzaToppings"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toEndOf="@+id/pizzaImageView"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Deluxe Pizza" app:layout_constraintVertical_bias="0.29"/>
     <TextView
@@ -35,14 +37,15 @@
             app:layout_constraintStart_toStartOf="@+id/pizzaName"
             app:layout_constraintTop_toBottomOf="@+id/pizzaName"
             tools:text="Sauce: tomato" app:layout_constraintVertical_bias="0.25"/>
+
     <TextView
-            android:id="@+id/pizzaToppings"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/pizzaSauce"
-            app:layout_constraintTop_toBottomOf="@+id/pizzaSauce"
-            tools:text="Toppings: sausage, pepperoni, green pepper, onion, mushroom" />
+        android:id="@+id/pizzaToppings"
+        android:layout_width="194dp"
+        android:layout_height="40dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/pizzaSauce"
+        app:layout_constraintTop_toBottomOf="@+id/pizzaSauce"
+        tools:text="Toppings: sausage, pepperoni, green pepper, onion, mushroom" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

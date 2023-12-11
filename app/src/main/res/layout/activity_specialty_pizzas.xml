@@ -17,23 +17,55 @@
             android:background="#740005"
             android:textColor="#ffffff"
             android:id="@+id/specialtypizzaactivitytitle"/>
-    <Button
-            android:id="@+id/backtomain_button"
-            android:text="Back to Main"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#ae7a47"
-            android:layout_gravity="center"/>
+
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="700dp"
             android:layout_weight="1"
             android:orientation="horizontal"
             android:weightSum="2" android:baselineAligned="false">
-        <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/idRVSpecialtyPizzas"
+
+        <ImageView
+            android:id="@+id/pageImageView"
+            android:layout_width="83dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/createyourownpizza" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/pagePizzaTitle"
                 android:layout_width="match_parent"
-                android:layout_height="263dp"/>
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Title"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/pagePizzaSauce"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Sauce"
+                android:textSize="20sp"
+                />
+
+            <TextView
+                android:id="@+id/pagePizzaToppings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Toppings"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
@@ -59,25 +91,29 @@
                         android:layout_height="wrap_content" android:id="@+id/textView3"
                         android:layout_gravity="center"/>
                 <RadioGroup
+                        android:id="@+id/specialty_size_radio_group"
                         android:layout_width="match_parent"
                         android:layout_height="183dp">
                     <RadioButton
+                            android:id="@+id/small"
                             android:text="Small"
                             android:textSize="20dp"
                             android:layout_width="175dp"
-                            android:layout_height="45dp" android:id="@+id/size_small"
+                            android:layout_height="45dp"
                             android:layout_gravity="center"/>
                     <RadioButton
+                            android:id="@+id/medium"
                             android:text="Medium"
                             android:textSize="20dp"
                             android:layout_width="175dp"
-                            android:layout_height="45dp" android:id="@+id/size_medium"
+                            android:layout_height="45dp"
                             android:layout_gravity="center"/>
                     <RadioButton
+                            android:id="@+id/large"
                             android:text="Large"
                             android:textSize="20dp"
                             android:layout_width="175dp"
-                            android:layout_height="45dp" android:id="@+id/size_large"
+                            android:layout_height="45dp"
                             android:layout_gravity="center"/>
                 </RadioGroup>
             </LinearLayout>
@@ -99,14 +135,14 @@
                         android:layout_width="175dp"
                         android:layout_height="50dp"
                         android:layout_gravity="center"
-                        android:id="@+id/extra_cheese"/>
+                        android:id="@+id/specialty_extra_cheese"/>
                 <CheckBox
                         android:text="Extra Sauce"
                         android:textSize="20dp"
                         android:layout_width="175dp"
                         android:layout_height="50dp"
                         android:layout_gravity="center"
-                        android:id="@+id/extra_sauce"/>
+                        android:id="@+id/specialty_extra_sauce"/>
             </LinearLayout>
         </RelativeLayout>
 
@@ -122,44 +158,55 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
             <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="205dp">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
                 <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="83dp">
-                    <TextView
-                            android:text="Price = "
-                            android:textSize="45dp"
-                            android:layout_width="109dp"
-                            android:layout_marginLeft="20dp"
-                            android:layout_height="wrap_content" android:id="@+id/textView4" android:layout_weight="1"/>
-                    <TextView
-                            android:text="[$--.--]"
-                            android:layout_width="175dp"
-                            android:layout_height="wrap_content"
-                            android:textSize="45dp"
-                            android:inputType="numberDecimal"
-                            android:ems="10"
-                            android:layout_marginRight="20dp"
-                            android:textAlignment="center"
-                            android:id="@+id/printPrice" android:layout_weight="1"/>
-                </LinearLayout>
-                <Button
-                        android:text="Add to Order"
-                        android:layout_width="234dp"
-                        android:layout_height="91dp" android:id="@+id/button2"
-                        android:layout_gravity="center"/>
-            </LinearLayout>
-            <Button
-                    android:text="Order Added!"
                     android:layout_width="match_parent"
+                    android:layout_height="83dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="109dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:text="Price = "
+                        android:textSize="45dp" />
+
+                    <TextView
+                        android:id="@+id/specialtyPizzaPrice"
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textSize="45dp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/specialtyAddToOrderButton"
+                    android:layout_width="217dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:text="Add to Order"
+                    android:enabled="false"/>
+
+                <Button
+                    android:id="@+id/backtomain_button"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button_success"
-                    android:backgroundTint="#4BB543"
-                    android:onClick="showToast"/>
+                    android:layout_gravity="center"
+                    android:backgroundTint="#ae7a47"
+                    android:text="Back to Main" />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
