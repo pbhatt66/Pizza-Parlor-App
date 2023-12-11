@@ -20,20 +20,20 @@
 
     <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="70dp"
             android:layout_weight="1"
             android:orientation="horizontal"
             android:weightSum="2" android:baselineAligned="true">
 
         <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="242dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1">
 
             <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="244dp">
+                    android:layout_height="match_parent">
                 <TextView
                         android:text="Size"
                         android:textSize="30sp"
@@ -70,7 +70,7 @@
 
         <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="241dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1">
             <LinearLayout
                     android:orientation="vertical"
@@ -124,93 +124,93 @@
             android:layout_width="match_parent"
             android:layout_height="250dp">
         <com.google.android.material.chip.ChipGroup
-            android:id="@+id/customize_toppings_group"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="10dp">
+                android:id="@+id/customize_toppings_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp">
 
             <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sausage"
-                android:id="@+id/sausage"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:layout_marginLeft="40dp"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sausage"
+                    android:id="@+id/sausage"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_marginLeft="40dp"/>
             <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:text="Pepperoni"
-                android:id="@+id/pepperoni"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:text="Pepperoni"
+                    android:id="@+id/pepperoni"/>
             <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:text="Ham"
-                android:id="@+id/ham"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:text="Ham"
+                    android:id="@+id/ham"/>
             <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:text="Beef"
-                android:id="@+id/beef"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:text="Beef"
+                    android:id="@+id/beef"/>
             <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:text="Shrimp"
-                android:id="@+id/shrimp"
-                android:layout_marginStart="70dp"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:text="Shrimp"
+                    android:id="@+id/shrimp"
+                    android:layout_marginStart="70dp"/>
             <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:text="Squid"
-                android:id="@+id/squid"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:text="Squid"
+                    android:id="@+id/squid"/>
             <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:text="Crab Meats"
-                android:id="@+id/crabmeats"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:text="Crab Meats"
+                    android:id="@+id/crabmeats"/>
             <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:text="Green Pepper"
-                android:id="@+id/greenpepper"
-                android:layout_marginLeft="50dp"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:text="Green Pepper"
+                    android:id="@+id/greenpepper"
+                    android:layout_marginLeft="50dp"/>
             <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:text="Onion"
-                android:id="@+id/onion"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:text="Onion"
+                    android:id="@+id/onion"/>
             <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:text="Mushroom"
-                android:id="@+id/Mushroom"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:text="Mushroom"
+                    android:id="@+id/Mushroom"/>
             <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:text="Black Olive"
-                android:id="@+id/blackolive"
-                android:layout_marginLeft="50dp"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:text="Black Olive"
+                    android:id="@+id/blackolive"
+                    android:layout_marginLeft="50dp"/>
             <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:text="Jalepeno"
-                android:id="@+id/jalepeno"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:text="Jalepeno"
+                    android:id="@+id/jalepeno"/>
             <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:text="Pineapple"
-                android:id="@+id/pineapple"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:text="Pineapple"
+                    android:id="@+id/pineapple"/>
         </com.google.android.material.chip.ChipGroup>
     </LinearLayout>
 
@@ -238,7 +238,6 @@
                         android:layout_width="175dp"
                         android:layout_height="wrap_content"
                         android:textSize="45dp"
-                        android:inputType="numberDecimal"
                         android:ems="10"
                         android:layout_marginRight="20dp"
                         android:textAlignment="center"
@@ -246,20 +245,20 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/customizeAddToOrderButton"
-                android:layout_width="178dp"
-                android:layout_height="64dp"
-                android:layout_gravity="center"
-                android:enabled="false"
-                android:text="Add to Order" />
+                    android:id="@+id/customizeAddToOrderButton"
+                    android:layout_width="178dp"
+                    android:layout_height="64dp"
+                    android:layout_gravity="center"
+                    android:enabled="false"
+                    android:text="Add to Order" />
 
             <Button
-                android:id="@+id/backtomain_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:backgroundTint="#ae7a47"
-                android:text="Back to Main" />
+                    android:id="@+id/backtomain_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#ae7a47"
+                    android:text="Back to Main" />
         </LinearLayout>
     </LinearLayout>
 

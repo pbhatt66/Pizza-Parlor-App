@@ -35,20 +35,20 @@
                 android:layout_height="wrap_content"
                 android:textSize="25dp"
                 android:layout_marginLeft="30dp"
-                android:id="@+id/textView2" android:layout_weight="1"/>
-        <EditText
+                android:id="@+id/textView1" android:layout_weight="1"/>
+        <TextView
                 android:layout_width="173dp"
                 android:layout_height="wrap_content"
-                android:inputType="number"
                 android:ems="10"
-                android:textSize="25dp"
-                android:layout_marginRight="25dp"
-                android:id="@+id/editTextNumber" android:layout_weight="1"/>
+                android:textSize="25sp"
+                android:layout_marginEnd="25dp"
+                android:id="@+id/orderNumber" android:layout_weight="1"/>
     </LinearLayout>
     <ListView
-            android:id="@+id/list"
+            android:id="@+id/pizzasListView"
             android:layout_width="match_parent"
-            android:layout_height="350dp"/>
+            android:layout_height="350dp"
+            android:choiceMode="singleChoice"/>
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -63,30 +63,28 @@
                     android:layout_width="97dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:id="@+id/textView7" android:layout_weight="1"/>
-            <EditText
+            <TextView
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
-                    android:inputType="number"
                     android:ems="10"
-                    android:layout_marginRight="10dp"
-                    android:textSize="20dp"
-                    android:id="@+id/editTextNumber3" android:layout_weight="1"/>
+                    android:layout_marginEnd="10dp"
+                    android:textSize="20sp"
+                    android:id="@+id/subTotal" android:layout_weight="1"/>
             <TextView
                     android:text="Sales Tax: "
                     android:layout_width="108dp"
                     android:layout_height="wrap_content"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:id="@+id/textView8" android:layout_weight="1"/>
-            <EditText
+            <TextView
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:inputType="number"
                     android:ems="10"
-                    android:layout_marginRight="10dp"
-                    android:textSize="20dp"
-                    android:id="@+id/editTextNumber4" android:layout_weight="1"/>
+                    android:layout_marginEnd="10dp"
+                    android:textSize="20sp"
+                    android:id="@+id/tax" android:layout_weight="1"/>
         </LinearLayout>
         <LinearLayout
                 android:orientation="horizontal"
@@ -98,14 +96,13 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
                     android:textSize="30dp" android:id="@+id/textView6"/>
-            <EditText
+            <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:inputType="number"
                     android:ems="10"
-                    android:textSize="30dp"
-                    android:layout_marginRight="10dp"
-                    android:id="@+id/editTextNumber2" android:layout_weight="1"/>
+                    android:textSize="30sp"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/total" android:layout_weight="1"/>
         </LinearLayout>
         <LinearLayout
                 android:orientation="horizontal"
