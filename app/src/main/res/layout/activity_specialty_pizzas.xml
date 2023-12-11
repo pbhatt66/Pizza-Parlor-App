@@ -42,7 +42,7 @@
                 android:id="@+id/pagePizzaTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="3dp"
                 android:text="Title"
                 android:textSize="30sp"
                 android:textStyle="bold"
@@ -52,7 +52,7 @@
                 android:id="@+id/pagePizzaSauce"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="3dp"
                 android:text="Sauce"
                 android:textSize="20sp"
                 />
@@ -61,7 +61,7 @@
                 android:id="@+id/pagePizzaToppings"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="3dp"
                 android:text="Toppings"
                 android:textSize="20sp"/>
         </LinearLayout>

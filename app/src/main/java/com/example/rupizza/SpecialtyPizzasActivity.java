@@ -14,7 +14,7 @@ public class SpecialtyPizzasActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
 
-    String[] names, descriptions;
+    String[] names, toppings, sauces;
     int[] images = {R.drawable.challengepizza, R.drawable.cheesesteakpizza, R.drawable.deluxepizza,
             R.drawable.hawaiianpizza, R.drawable.meatzzapizza, R.drawable.pepperonipizza, R.drawable.seafoodpizza,
             R.drawable.supremepizza, R.drawable.surfnturfpizza, R.drawable.vegetarianpizza};
@@ -27,9 +27,10 @@ public class SpecialtyPizzasActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.newRecyclerView);
 
         names = getResources().getStringArray(R.array.specialty_pizzas);
-        descriptions = getResources().getStringArray(R.array.description);
+        toppings = getResources().getStringArray(R.array.toppings);
+        sauces = getResources().getStringArray(R.array.sauces);
 
-        SpecialtyPizzaAdapter specialtyPizzaAdapter = new SpecialtyPizzaAdapter(this, names, descriptions, images);
+        SpecialtyPizzaAdapter specialtyPizzaAdapter = new SpecialtyPizzaAdapter(this, names, toppings, sauces, images);
         recyclerView.setAdapter(specialtyPizzaAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -42,8 +43,4 @@ public class SpecialtyPizzasActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void showToast(View v)
-    {
-
-    }
 }

@@ -13,7 +13,7 @@ public class SurfNTurf extends Pizza {
      */
     public SurfNTurf() {
         super();
-        this.sauce = Sauce.TOMATO;
+        this.sauce = Sauce.ALFREDO;
         toppings.add(Topping.SQUID);
         toppings.add(Topping.BEEF);
         toppings.add(Topping.SHRIMP);

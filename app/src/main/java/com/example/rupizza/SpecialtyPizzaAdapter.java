@@ -17,14 +17,14 @@ import java.util.List;
 public class SpecialtyPizzaAdapter extends RecyclerView.Adapter<SpecialtyPizzaAdapter.SpecialtyPizzaViewHolder> {
     // private List<Pizza> specialtyPizzas;
     Context ct;
-    String[] pizzaNames, pizzaDescriptions;
+    String[] pizzaNames, pizzaToppings, pizzaSauces;
     int[] pizzaImages;
 
-    public SpecialtyPizzaAdapter(Context ct, String[] pizzaName, String[] pizzaDescription, int[] pizzaImages) {
-        // this.specialtyPizzas = specialtyPizzas;
+    public SpecialtyPizzaAdapter(Context ct, String[] pizzaName, String[] pizzaToppings, String[] pizzaSauces, int[] pizzaImages) {
         this.ct = ct;
         this.pizzaNames = pizzaName;
-        this.pizzaDescriptions = pizzaDescription;
+        this.pizzaToppings = pizzaToppings;
+        this.pizzaSauces = pizzaSauces;
         this.pizzaImages = pizzaImages;
     }
 
@@ -40,7 +40,8 @@ public class SpecialtyPizzaAdapter extends RecyclerView.Adapter<SpecialtyPizzaAd
     public void onBindViewHolder(SpecialtyPizzaViewHolder holder, int position) {
        // Pizza specialityPizza = specialtyPizzas.get(position);
         holder.pizzaName.setText(pizzaNames[position]);
-        holder.pizzaDescription.setText(pizzaDescriptions[position]);
+        holder.pizzaToppings.setText(pizzaToppings[position]);
+        holder.pizzaSauce.setText(pizzaSauces[position]);
         holder.pizzaImage.setImageResource(pizzaImages[position]);
 
         holder.mainLayout.setOnClickListener(new View.OnClickListener() {
@@ -48,7 +49,8 @@ public class SpecialtyPizzaAdapter extends RecyclerView.Adapter<SpecialtyPizzaAd
             public void onClick(View v) {
                 Intent intent = new Intent(ct, DetailSpecialtyActivity.class);
                 intent.putExtra("pizzaName", pizzaNames[position]);
-                intent.putExtra("pizzaDescription", pizzaDescriptions[position]);
+                intent.putExtra("pizzaDescription", pizzaToppings[position]);
+                intent.putExtra("pizzaSauce", pizzaSauces[position]);
                 intent.putExtra("pizzaImage", pizzaImages[position]);
                 ct.startActivity(intent);
             }
@@ -61,13 +63,14 @@ public class SpecialtyPizzaAdapter extends RecyclerView.Adapter<SpecialtyPizzaAd
     }
 
     public class SpecialtyPizzaViewHolder extends RecyclerView.ViewHolder {
-        TextView pizzaName, pizzaDescription;
+        TextView pizzaName, pizzaToppings, pizzaSauce;
         ImageView pizzaImage;
         ConstraintLayout mainLayout;
         public SpecialtyPizzaViewHolder(View itemView) {
             super(itemView);
             pizzaName = itemView.findViewById(R.id.pizzaName);
-            pizzaDescription = itemView.findViewById(R.id.pizzaToppings);
+            pizzaToppings = itemView.findViewById(R.id.pizzaToppings);
+            pizzaSauce = itemView.findViewById(R.id.pizzaSauce);
             pizzaImage = itemView.findViewById(R.id.pizzaImageView);
             mainLayout = itemView.findViewById(R.id.mainLayout);
         }
