@@ -19,6 +19,107 @@
             android:id="@+id/specialtypizzaactivitytitle"/>
 
     <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2" android:baselineAligned="true">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="242dp"
+                android:layout_weight="1">
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="244dp">
+                <TextView
+                        android:text="Size"
+                        android:textSize="30sp"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content" android:id="@+id/textView3"
+                        android:layout_gravity="center"/>
+                <RadioGroup
+                        android:id="@+id/customize_size_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="183dp">
+                    <RadioButton
+                            android:text="Small"
+                            android:textSize="20sp"
+                            android:layout_width="175dp"
+                            android:layout_height="45dp" android:id="@+id/size_small"
+                            android:layout_gravity="center"/>
+                    <RadioButton
+                            android:text="Medium"
+                            android:textSize="20sp"
+                            android:layout_width="175dp"
+                            android:layout_height="45dp" android:id="@+id/size_medium"
+                            android:layout_gravity="center"/>
+                    <RadioButton
+                            android:text="Large"
+                            android:textSize="20sp"
+                            android:layout_width="175dp"
+                            android:layout_height="45dp" android:id="@+id/size_large"
+                            android:layout_gravity="center"/>
+                </RadioGroup>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="241dp"
+                android:layout_weight="1">
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="241dp">
+                <TextView
+                        android:text="Sauce"
+                        android:textSize="30sp"
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content" android:id="@+id/textView"
+                        android:layout_gravity="center"/>
+                <RadioGroup
+                        android:id="@+id/customize_sauce_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp">
+                    <RadioButton
+                            android:text="Tomato"
+                            android:textSize="20sp"
+                            android:layout_width="175dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:id="@+id/tomato"/>
+                    <RadioButton
+                            android:text="Alfredo"
+                            android:textSize="20sp"
+                            android:layout_width="175dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:id="@+id/alfredo"/>
+                </RadioGroup>
+                <CheckBox
+                        android:text="Extra Cheese"
+                        android:textSize="20sp"
+                        android:layout_width="175dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:id="@+id/custom_extra_cheese"/>
+                <CheckBox
+                        android:text="Extra Sauce"
+                        android:textSize="20sp"
+                        android:layout_width="175dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:id="@+id/custom_extra_sauce"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+    <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="250dp">
@@ -111,108 +212,6 @@
                 android:text="Pineapple"
                 android:id="@+id/pineapple"/>
         </com.google.android.material.chip.ChipGroup>
-    </LinearLayout>
-
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:weightSum="2" android:baselineAligned="true">
-
-        <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="242dp"
-                android:layout_weight="1">
-
-            <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="244dp">
-                <TextView
-                        android:text="Size"
-                        android:textSize="30sp"
-                        android:layout_width="170dp"
-                        android:layout_height="wrap_content" android:id="@+id/textView3"
-                        android:layout_gravity="center"/>
-                <RadioGroup
-                        android:id="@+id/customize_size_group"
-                        android:layout_width="match_parent"
-                        android:layout_height="183dp">
-                    <RadioButton
-                        android:text="Small"
-                        android:textSize="20sp"
-                        android:layout_width="175dp"
-                        android:layout_height="45dp" android:id="@+id/size_small"
-                        android:layout_gravity="center"/>
-                    <RadioButton
-                        android:text="Medium"
-                        android:textSize="20sp"
-                        android:layout_width="175dp"
-                        android:layout_height="45dp" android:id="@+id/size_medium"
-                        android:layout_gravity="center"/>
-                    <RadioButton
-                        android:text="Large"
-                        android:textSize="20sp"
-                        android:layout_width="175dp"
-                        android:layout_height="45dp" android:id="@+id/size_large"
-                        android:layout_gravity="center"/>
-                </RadioGroup>
-            </LinearLayout>
-
-        </RelativeLayout>
-
-
-        <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="241dp"
-                android:layout_weight="1">
-            <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="241dp">
-                <TextView
-                        android:text="Sauce"
-                        android:textSize="30sp"
-                        android:layout_width="175dp"
-                        android:layout_height="wrap_content" android:id="@+id/textView"
-                        android:layout_gravity="center"/>
-                <RadioGroup
-                    android:id="@+id/customize_sauce_group"
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp">
-                    <RadioButton
-                            android:text="Tomato"
-                            android:textSize="20sp"
-                            android:layout_width="175dp"
-                            android:layout_height="35dp"
-                            android:layout_gravity="center"
-                            android:id="@+id/tomato"/>
-                    <RadioButton
-                            android:text="Alfredo"
-                            android:textSize="20sp"
-                            android:layout_width="175dp"
-                            android:layout_height="35dp"
-                            android:layout_gravity="center"
-                            android:id="@+id/alfredo"/>
-                </RadioGroup>
-                <CheckBox
-                        android:text="Extra Cheese"
-                        android:textSize="20sp"
-                        android:layout_width="175dp"
-                        android:layout_height="35dp"
-                        android:layout_gravity="center"
-                        android:id="@+id/custom_extra_cheese"/>
-                <CheckBox
-                        android:text="Extra Sauce"
-                        android:textSize="20sp"
-                        android:layout_width="175dp"
-                        android:layout_height="35dp"
-                        android:layout_gravity="center"
-                        android:id="@+id/custom_extra_sauce"/>
-            </LinearLayout>
-        </RelativeLayout>
-
     </LinearLayout>
 
     <LinearLayout
