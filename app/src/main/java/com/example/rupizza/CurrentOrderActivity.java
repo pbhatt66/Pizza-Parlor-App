@@ -1,10 +1,7 @@
 package com.example.rupizza;
 
 import android.content.Intent;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ListView;
-import android.widget.TextView;
+import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -35,6 +32,9 @@ public class CurrentOrderActivity extends AppCompatActivity {
 
         Button remove_pizza = findViewById(R.id.removepizza_button);
         remove_pizza.setOnClickListener(v -> handleRemovePizzaButtonAction());
+
+        Button place_order = findViewById(R.id.placeorder_button);
+        place_order.setOnClickListener(v -> handlePlaceOrderButtonAction());
     }
 
     public void openMainActivity() {
@@ -44,7 +44,10 @@ public class CurrentOrderActivity extends AppCompatActivity {
 
     private void updateOrderInfo() {
         if (storeOrders.getCurrentOrder() == null) {
-            return;
+            orderNumber.setText(0);
+            subTotal.setText(0);
+            tax.setText(0);
+            total.setText(0);
         }
 
         List<String> pizzaStrings = storeOrders.getCurrentOrder().getPizzas().stream()
@@ -75,5 +78,17 @@ public class CurrentOrderActivity extends AppCompatActivity {
             adapter.notifyDataSetChanged();
         }
         updateOrderInfo();
+    }
+
+    private void handlePlaceOrderButtonAction() {
+        Order currentOrder = storeOrders.getCurrentOrder();
+        if (currentOrder != null && !currentOrder.getPizzas().isEmpty()) {
+            storeOrders.startNewOrder();
+            updateOrderInfo();
+            Toast.makeText(this,"Order #" + currentOrder.getOrderNumber() + " has been placed.", Toast.LENGTH_SHORT).show();
+            // return to main activity
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
     }
 }
