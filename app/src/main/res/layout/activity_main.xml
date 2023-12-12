@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:background="#eadac0"
               android:orientation="vertical"
@@ -16,8 +17,7 @@
         <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-        >
+                android:layout_weight="1" tools:ignore="NestedWeights">
 
             <Button
                     android:id="@+id/specialtypizzas_button"
@@ -25,7 +25,7 @@
                     android:layout_height="300dp"
                     android:layout_centerInParent="true"
                     android:backgroundTint="#740005"
-                    android:text="button1" />
+                    android:text="@string/blank" />
             <ImageView
                     android:layout_width="150dp"
                     android:layout_height="150dp" app:srcCompat="@drawable/specialtypizzas"
@@ -39,7 +39,7 @@
                     android:paddingTop="70dp"
                     android:fontFamily="serif"
                     android:gravity="center"
-                    android:text="Specialty Pizzas"
+                    android:text="@string/specialty_pizzas"
                     android:textColor="#ffffff"
                     android:textSize="18sp" />
 
@@ -56,7 +56,7 @@
                     android:layout_height="300dp"
                     android:layout_centerInParent="true"
                     android:backgroundTint="#c32105"
-                    android:text="button2" />
+                    android:text="@string/blank" />
             <ImageView
                     android:layout_width="150dp"
                     android:layout_height="150dp" app:srcCompat="@drawable/createyourownpizza"
@@ -70,7 +70,7 @@
                     android:paddingTop="70dp"
                     android:fontFamily="serif"
                     android:gravity="center"
-                    android:text="Create Your Own"
+                    android:text="@string/create_your_own"
                     android:textColor="#ffffff"
                     android:textSize="18sp" />
 
@@ -82,7 +82,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="RU Pizza"
+            android:text="@string/rupizza"
             android:ems="10"
             android:textSize="40sp"
             android:fontFamily="serif"
@@ -99,7 +99,7 @@
         <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_weight="1" tools:ignore="NestedWeights">
 
             <Button
                     android:id="@+id/currentorder_button"
@@ -107,7 +107,7 @@
                     android:layout_height="300dp"
                     android:layout_centerInParent="true"
                     android:backgroundTint="#807e2a"
-                    android:text="button3" />
+                    android:text="@string/blank" />
             <ImageView
                     android:layout_width="150dp"
                     android:layout_height="150dp" app:srcCompat="@drawable/currentorder"
@@ -121,7 +121,7 @@
                     android:paddingTop="80dp"
                     android:fontFamily="serif"
                     android:gravity="center"
-                    android:text="Current Order"
+                    android:text="@string/current_order"
                     android:textColor="#ffffff"
                     android:textSize="18sp" />
 
@@ -139,7 +139,7 @@
                     android:layout_height="300dp"
                     android:layout_centerInParent="true"
                     android:backgroundTint="#444801"
-                    android:text="button4" />
+                    android:text="@string/blank" />
             <ImageView
                     android:layout_width="150dp"
                     android:layout_height="150dp" app:srcCompat="@drawable/storeorders"
@@ -153,7 +153,7 @@
                     android:paddingTop="80dp"
                     android:fontFamily="serif"
                     android:gravity="center"
-                    android:text="Store Orders"
+                    android:text="@string/store_orders"
                     android:textColor="#ffffff"
                     android:textSize="18sp" />
 
