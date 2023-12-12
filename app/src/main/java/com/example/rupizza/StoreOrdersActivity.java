@@ -105,6 +105,7 @@ public class StoreOrdersActivity extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setMessage("You can't cancel the current order! Please place the order first.")
                         .setTitle("Error");
+                builder.setPositiveButton("OK", null);
                 AlertDialog dialog = builder.create();
                 dialog.show();
                 return;
