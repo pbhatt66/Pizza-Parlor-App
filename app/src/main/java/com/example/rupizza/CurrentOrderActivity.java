@@ -26,7 +26,10 @@ public class CurrentOrderActivity extends AppCompatActivity {
         subTotal = findViewById(R.id.subTotal);
         tax = findViewById(R.id.tax);
         total = findViewById(R.id.total);
-        updateOrderInfo();
+        // updateOrderInfo();
+        if (storeOrders.getCurrentOrder() != null) {
+            updateOrderInfo();
+        }
 
         Button back_to_main = findViewById(R.id.backtomain_button);
         back_to_main.setOnClickListener(v -> openMainActivity());
