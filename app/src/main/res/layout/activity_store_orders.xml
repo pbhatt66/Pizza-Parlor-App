@@ -67,14 +67,16 @@
                     android:layout_marginRight="10dp"
                     android:id="@+id/editTextNumber2" android:layout_weight="1"/>
         </LinearLayout>
+
         <Button
-                android:text="Cancel Order"
-                android:layout_width="300dp"
-                android:layout_height="81dp"
-                android:backgroundTint="#740005"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:id="@+id/cancelOrderButton" android:layout_weight="1"/>
+            android:id="@+id/cancelOrderButton"
+            android:layout_width="266dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:backgroundTint="#740005"
+            android:text="Cancel Order" />
 
         <Button
             android:id="@+id/backtomain_button"

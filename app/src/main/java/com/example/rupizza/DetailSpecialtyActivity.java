@@ -2,6 +2,7 @@ package com.example.rupizza;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
@@ -12,19 +13,22 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class DetailSpecialtyActivity extends AppCompatActivity {
     ImageView pageImageView;
-    TextView pagePizzaTitle, pagePizzaToppings, pagePizzaSauce, priceTextView;
+    TextView pagePizzaTitle, pagePizzaToppings, pagePizzaSauce, priceTextView, quantityTextView;
 
     CheckBox extraCheeseCheckBox, extraSauceCheckBox;
 
-    Button addToOrderButton;
+    Button addToOrderButton, incrementButton, decrementButton;
 
     String pizzaName, pizzaToppings, pizzaSauce;
     int pizzaImage;
 
 
     StoreOrders storeOrders = StoreOrders.getInstance();
+    final int[] quantity = {1};
 
 
     @Override
@@ -37,10 +41,42 @@ public class DetailSpecialtyActivity extends AppCompatActivity {
         pagePizzaSauce = findViewById(R.id.pagePizzaSauce);
         pagePizzaToppings = findViewById(R.id.pagePizzaToppings);
 
+        quantityTextView = findViewById(R.id.quantity);
+        quantityTextView.setText(String.valueOf(quantity[0]));
+        incrementButton = findViewById(R.id.increment);
+        decrementButton = findViewById(R.id.decrement);
+
+        incrementButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (quantity[0] < 10) {
+                    quantity[0]++;  // Increase order quantity
+                    quantityTextView.setText(String.valueOf(quantity[0]));
+                    if (quantity[0] == 10) {
+                        incrementButton.setEnabled(false);  // Disable increment button
+                    }
+                    decrementButton.setEnabled(true);  // Enable decrement button
+                }
+                updatePrice();
+            }
+        });
+        decrementButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (quantity[0] > 1) {
+                    quantity[0]--;  // Decrease order quantity
+                    quantityTextView.setText(String.valueOf(quantity[0]));
+                    if (quantity[0] == 1) {
+                        decrementButton.setEnabled(false);  // Disable decrement button
+                    }
+                    incrementButton.setEnabled(true);  // Enable increment button
+                }
+                updatePrice();
+            }
+        });
+
         Button back_to_main = findViewById(R.id.backtomain_button);
         back_to_main.setOnClickListener(v -> openMainActivity());
-
-        // handleRadioButtonSelection();
 
         RadioGroup sizeRadioGroup = findViewById(R.id.specialty_size_radio_group);
         sizeRadioGroup.setOnCheckedChangeListener((radioGroup, i) -> {
@@ -98,17 +134,19 @@ public class DetailSpecialtyActivity extends AppCompatActivity {
                 case "Large" -> tempSize = Size.LARGE;
             }
             pizza.setSize(tempSize);
+
+            extraCheeseCheckBox = findViewById(R.id.specialty_extra_cheese);
+            if (extraCheeseCheckBox.isChecked()) {
+                pizza.addExtraCheese();
+            }
+            extraSauceCheckBox = findViewById(R.id.specialty_extra_sauce);
+            if (extraSauceCheckBox.isChecked()) {
+                pizza.addExtraSauce();
+            }
+            priceTextView = findViewById(R.id.specialtyPizzaPrice);
+            double pizzaPrice = pizza.price() * quantity[0];
+            priceTextView.setText(String.format("$%.2f", pizzaPrice));
         }
-        extraCheeseCheckBox = findViewById(R.id.specialty_extra_cheese);
-        if (extraCheeseCheckBox.isChecked()) {
-            pizza.addExtraCheese();
-        }
-        extraSauceCheckBox = findViewById(R.id.specialty_extra_sauce);
-        if (extraSauceCheckBox.isChecked()) {
-            pizza.addExtraSauce();
-        }
-        priceTextView = findViewById(R.id.specialtyPizzaPrice);
-        priceTextView.setText(String.format("$%.2f", pizza.price()));
     }
 
     private void handleOrderButtonAction() {
@@ -134,40 +172,28 @@ public class DetailSpecialtyActivity extends AppCompatActivity {
         if (extraSauce) {
             pizza.addExtraSauce();
         }
-        Order currentOrder = storeOrders.getCurrentOrder();
-        if (currentOrder != null) {
-            currentOrder.addToOrder(pizza);
+        for (int i = 0; i < quantity[0]; i++) {
+            Order currentOrder = storeOrders.getCurrentOrder();
+            if (currentOrder != null) {
+                currentOrder.addToOrder(pizza);
+            }
+            else {
+                storeOrders.startNewOrder();
+                storeOrders.getCurrentOrder().addToOrder(pizza);
+            }
         }
-        else {
-            storeOrders.startNewOrder();
-            storeOrders.getCurrentOrder().addToOrder(pizza);
-        }
-        Toast.makeText(this, "Pizza added to order", Toast.LENGTH_SHORT).show();
+        if (quantity[0] == 1) Toast.makeText(this, "Pizza added to order", Toast.LENGTH_SHORT).show();
+        else Toast.makeText(this, "Pizzas added to order", Toast.LENGTH_SHORT).show();
         // return to main activity
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
-//    private void handleRadioButtonSelection() {
-//        RadioGroup radioGroup = findViewById(R.id.size_radio_group);
-//        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
-//                RadioButton selectedRadioButton = (RadioButton) findViewById(checkedId);
-//                String selectedSize = selectedRadioButton.getText().toString();
-//                switch (selectedSize) {
-//                    case "Small" -> size = Size.SMALL;
-//                    case "Medium" -> size = Size.MEDIUM;
-//                    case "Large" -> size = Size.LARGE;
-//                }
-//                // enable the add to cart button if a size is selected
-//                findViewById(R.id.addToOrderButton).setEnabled(true);
-//            }
-//        });
-//
-//    }
-
     private void keyReleasedProperty() {
         findViewById(R.id.specialtyAddToOrderButton).setEnabled(true);
+    }
+
+    private void handleQuantityButtonAction() {
+
     }
 }

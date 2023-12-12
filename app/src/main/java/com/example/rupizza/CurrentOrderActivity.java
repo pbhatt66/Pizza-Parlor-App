@@ -69,6 +69,12 @@ public class CurrentOrderActivity extends AppCompatActivity {
     }
 
     private void handleRemovePizzaButtonAction() {
+        // if no pizza is selected or there are no pizzas in the order, do nothing
+        if (storeOrders.getCurrentOrder() == null || storeOrders.getCurrentOrder().getPizzas().isEmpty()) {
+            return;
+        }
+
+
         int selectedPosition = pizzasListView.getCheckedItemPosition();
 
         if (selectedPosition != ListView.INVALID_POSITION) {

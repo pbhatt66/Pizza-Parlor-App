@@ -39,65 +39,81 @@
             android:layout_marginTop="10dp"
                 android:id="@+id/orderNumber" android:layout_weight="1"/>
     </LinearLayout>
+
     <ListView
-            android:id="@+id/pizzasListView"
-            android:layout_width="match_parent"
-            android:layout_height="350dp"
-            android:choiceMode="singleChoice"/>
+        android:id="@+id/pizzasListView"
+        android:layout_width="match_parent"
+        android:layout_height="366dp"
+        android:choiceMode="singleChoice" />
+
     <LinearLayout
-            android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="319dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="30dp">
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="60dp">
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
             <TextView
-                    android:text="Subtotal:"
-                    android:layout_width="97dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="20sp"
-                    android:id="@+id/textView7" android:layout_weight="1"/>
+                android:id="@+id/textView7"
+                android:layout_width="97dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="Subtotal:"
+                android:textSize="20sp" />
+
             <TextView
-                    android:layout_width="160dp"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:layout_marginEnd="10dp"
-                    android:textSize="20sp"
-                    android:id="@+id/subTotal" android:layout_weight="1"/>
+                android:id="@+id/subTotal"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:textSize="20sp" />
+
             <TextView
-                    android:text="Sales Tax: "
-                    android:layout_width="108dp"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:id="@+id/textView8" android:layout_weight="1"/>
+                android:id="@+id/textView8"
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Sales Tax: "
+                android:textSize="20sp" />
+
             <TextView
-                    android:layout_width="80dp"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:layout_marginEnd="10dp"
-                    android:textSize="20sp"
-                    android:id="@+id/tax" android:layout_weight="1"/>
+                android:id="@+id/tax"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:textSize="20sp" />
         </LinearLayout>
+
         <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="60dp">
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
             <TextView
-                    android:text="Order Total: "
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="30dp" android:id="@+id/textView6"/>
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:text="Order Total: "
+                android:textSize="30dp" />
+
             <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:ems="10"
-                    android:textSize="30sp"
-                    android:layout_marginEnd="10dp"
-                    android:id="@+id/total" android:layout_weight="1"/>
+                android:id="@+id/total"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:textSize="30sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -107,17 +123,17 @@
 
             <Button
                 android:id="@+id/removepizza_button"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="120dp"
-                android:layout_marginRight="10dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#740005"
                 android:text="Remove Pizza" />
 
             <Button
                 android:id="@+id/placeorder_button"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="15dp"
@@ -128,13 +144,13 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="88dp"
+            android:layout_height="63dp"
             android:orientation="vertical">
 
             <Button
                 android:id="@+id/backtomain_button"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:backgroundTint="#ae7a47"
                 android:text="Back to Main" />
