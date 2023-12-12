@@ -17,13 +17,6 @@
             android:background="#444801"
             android:textColor="#ffffff"
             android:id="@+id/specialtypizzaactivitytitle"/>
-    <Button
-            android:id="@+id/backtomain_button"
-            android:text="Back to Main"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#ae7a47"
-            android:layout_gravity="center"/>
 
     <LinearLayout
             android:orientation="horizontal"
@@ -37,7 +30,7 @@
                 android:layout_marginLeft="30dp"
                 android:id="@+id/textView2" android:layout_weight="1"/>
         <Spinner
-                android:id="@+id/coursesspinner"
+                android:id="@+id/storeOrderSpinner"
                 android:layout_height="50dp"
                 android:layout_width="185dp"
                 android:layout_marginEnd="10dp"
@@ -45,10 +38,11 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
     </LinearLayout>
+
     <ListView
-            android:id="@+id/list"
-            android:layout_width="match_parent"
-            android:layout_height="350dp"/>
+        android:id="@+id/storeOrderList"
+        android:layout_width="match_parent"
+        android:layout_height="439dp" />
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -64,7 +58,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
                     android:textSize="30dp" android:id="@+id/textView6"/>
-            <EditText
+            <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:inputType="number"
@@ -80,6 +74,14 @@
                 android:backgroundTint="#740005"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
-                android:id="@+id/removepizza_button" android:layout_weight="1"/>
+                android:id="@+id/cancelOrderButton" android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/backtomain_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#ae7a47"
+            android:text="Back to Main" />
     </LinearLayout>
 </LinearLayout>
