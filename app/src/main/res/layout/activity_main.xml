@@ -17,15 +17,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-            >
+        >
 
             <Button
-                android:id="@+id/specialtypizzas_button"
-                android:layout_width="180dp"
-                android:layout_height="300dp"
-                android:layout_centerInParent="true"
-                android:backgroundTint="#740005"
-                android:text="button1" />
+                    android:id="@+id/specialtypizzas_button"
+                    android:layout_width="180dp"
+                    android:layout_height="300dp"
+                    android:layout_centerInParent="true"
+                    android:backgroundTint="#740005"
+                    android:text="button1" />
             <ImageView
                     android:layout_width="150dp"
                     android:layout_height="150dp" app:srcCompat="@drawable/specialtypizzas"
@@ -33,15 +33,15 @@
                     android:layout_centerInParent="true"/>
 
             <TextView
-                android:id="@+id/specialtypizzas_text"
-                android:layout_width="match_parent"
-                android:layout_height="93dp"
-                android:paddingTop="30dp"
-                android:fontFamily="serif"
-                android:gravity="center"
-                android:text="Specialty Pizzas"
-                android:textColor="#ffffff"
-                android:textSize="18sp" />
+                    android:id="@+id/specialtypizzas_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:paddingTop="70dp"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:text="Specialty Pizzas"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
 
         </RelativeLayout>
 
@@ -51,12 +51,12 @@
                 android:layout_weight="1">
 
             <Button
-                android:id="@+id/buildyourown_button"
-                android:layout_width="180dp"
-                android:layout_height="300dp"
-                android:layout_centerInParent="true"
-                android:backgroundTint="#c32105"
-                android:text="button2" />
+                    android:id="@+id/buildyourown_button"
+                    android:layout_width="180dp"
+                    android:layout_height="300dp"
+                    android:layout_centerInParent="true"
+                    android:backgroundTint="#c32105"
+                    android:text="button2" />
             <ImageView
                     android:layout_width="150dp"
                     android:layout_height="150dp" app:srcCompat="@drawable/createyourownpizza"
@@ -64,15 +64,15 @@
                     android:layout_centerInParent="true"/>
 
             <TextView
-                android:id="@+id/buildyourown_text"
-                android:layout_width="198dp"
-                android:layout_height="93dp"
-                android:paddingTop="30dp"
-                android:fontFamily="serif"
-                android:gravity="center"
-                android:text="Create Your Own"
-                android:textColor="#ffffff"
-                android:textSize="18sp" />
+                    android:id="@+id/buildyourown_text"
+                    android:layout_width="198dp"
+                    android:layout_height="120dp"
+                    android:paddingTop="70dp"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:text="Create Your Own"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
 
         </RelativeLayout>
 
@@ -102,12 +102,12 @@
                 android:layout_weight="1">
 
             <Button
-                android:id="@+id/currentorder_button"
-                android:layout_width="180dp"
-                android:layout_height="300dp"
-                android:layout_centerInParent="true"
-                android:backgroundTint="#807e2a"
-                android:text="button3" />
+                    android:id="@+id/currentorder_button"
+                    android:layout_width="180dp"
+                    android:layout_height="300dp"
+                    android:layout_centerInParent="true"
+                    android:backgroundTint="#807e2a"
+                    android:text="button3" />
             <ImageView
                     android:layout_width="150dp"
                     android:layout_height="150dp" app:srcCompat="@drawable/currentorder"
@@ -115,15 +115,15 @@
                     android:layout_centerInParent="true"/>
 
             <TextView
-                android:id="@+id/currentorder_text"
-                android:layout_width="match_parent"
-                android:layout_height="83dp"
-                android:paddingTop="30dp"
-                android:fontFamily="serif"
-                android:gravity="center"
-                android:text="Current Order"
-                android:textColor="#ffffff"
-                android:textSize="18sp" />
+                    android:id="@+id/currentorder_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:paddingTop="80dp"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:text="Current Order"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
 
         </RelativeLayout>
 
@@ -134,12 +134,12 @@
                 android:layout_weight="1">
 
             <Button
-                android:id="@+id/storeorders_button"
-                android:layout_width="180dp"
-                android:layout_height="300dp"
-                android:layout_centerInParent="true"
-                android:backgroundTint="#444801"
-                android:text="button4" />
+                    android:id="@+id/storeorders_button"
+                    android:layout_width="180dp"
+                    android:layout_height="300dp"
+                    android:layout_centerInParent="true"
+                    android:backgroundTint="#444801"
+                    android:text="button4" />
             <ImageView
                     android:layout_width="150dp"
                     android:layout_height="150dp" app:srcCompat="@drawable/storeorders"
@@ -147,15 +147,15 @@
                     android:layout_centerInParent="true"/>
 
             <TextView
-                android:id="@+id/storeorders_text"
-                android:layout_width="match_parent"
-                android:layout_height="83dp"
-                android:paddingTop="30dp"
-                android:fontFamily="serif"
-                android:gravity="center"
-                android:text="Store Orders"
-                android:textColor="#ffffff"
-                android:textSize="18sp" />
+                    android:id="@+id/storeorders_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:paddingTop="80dp"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:text="Store Orders"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
 
         </RelativeLayout>
 
