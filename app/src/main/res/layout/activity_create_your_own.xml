@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:background="#eadac0"
               android:orientation="vertical"
@@ -10,7 +11,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:gravity="center"
-            android:text="Customize Your Pizza"
+            android:text="@string/title3"
             android:ems="10"
             android:textSize="30sp"
             android:fontFamily="serif"
@@ -28,7 +29,7 @@
         <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_weight="1" tools:ignore="NestedWeights">
 
             <LinearLayout
                     android:orientation="vertical"
@@ -36,7 +37,7 @@
                     android:layout_height="match_parent"
                 android:layout_marginTop="10dp">
                 <TextView
-                        android:text="Size"
+                        android:text="@string/size"
                         android:textSize="30sp"
                         android:layout_width="170dp"
                         android:layout_height="wrap_content" android:id="@+id/textView3"
@@ -46,19 +47,19 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
                     <RadioButton
-                            android:text="Small"
+                            android:text="@string/small"
                             android:textSize="30sp"
                             android:layout_width="175dp"
                             android:layout_height="50dp" android:id="@+id/size_small"
                             android:layout_gravity="center"/>
                     <RadioButton
-                            android:text="Medium"
+                            android:text="@string/medium"
                             android:textSize="30sp"
                             android:layout_width="175dp"
                             android:layout_height="50dp" android:id="@+id/size_medium"
                             android:layout_gravity="center"/>
                     <RadioButton
-                            android:text="Large"
+                            android:text="@string/large"
                             android:textSize="30sp"
                             android:layout_width="175dp"
                             android:layout_height="50dp" android:id="@+id/size_large"
@@ -79,7 +80,7 @@
                     android:layout_height="241dp"
                 android:layout_marginTop="10dp">
                 <TextView
-                        android:text="Sauce"
+                        android:text="@string/sauce"
                         android:textSize="30sp"
                         android:layout_width="175dp"
                         android:layout_height="wrap_content" android:id="@+id/textView"
@@ -89,14 +90,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="105dp">
                     <RadioButton
-                            android:text="Tomato"
+                            android:text="@string/tomato"
                             android:textSize="20sp"
                             android:layout_width="175dp"
                             android:layout_height="50dp"
                             android:layout_marginStart="15dp"
                             android:id="@+id/tomato"/>
                     <RadioButton
-                            android:text="Alfredo"
+                            android:text="@string/alfredo"
                             android:textSize="20sp"
                             android:layout_width="181dp"
                             android:layout_height="wrap_content"
@@ -104,14 +105,14 @@
                             android:id="@+id/alfredo"/>
                 </RadioGroup>
                 <CheckBox
-                        android:text="Extra Cheese"
+                        android:text="@string/extra_cheese"
                         android:textSize="20sp"
                         android:layout_width="175dp"
                         android:layout_height="50dp"
                         android:layout_gravity="center"
                         android:id="@+id/custom_extra_cheese"/>
                 <CheckBox
-                        android:text="Extra Sauce"
+                        android:text="@string/extra_sauce"
                         android:textSize="20sp"
                         android:layout_width="175dp"
                         android:layout_height="50dp"
@@ -138,29 +139,29 @@
                 style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:text="Sausage" />
+                android:layout_marginStart="40dp"
+                android:text="@string/sausage" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/pepperoni"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pepperoni" />
+                android:text="@string/pepperoni" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/ham"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ham" />
+                android:text="@string/ham" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/beef"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Beef" />
+                android:text="@string/beef" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/shrimp"
@@ -168,65 +169,65 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="70dp"
-                android:text="Shrimp" />
+                android:text="@string/shrimp" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/squid"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Squid" />
+                android:text="@string/squid" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/crabmeats"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Crab Meats" />
+                android:text="@string/crab" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/greenpepper"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:text="Green Pepper" />
+                android:layout_marginStart="50dp"
+                android:text="@string/green_pepper" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/onion"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Onion" />
+                android:text="@string/onion" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/Mushroom"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mushroom" />
+                android:text="@string/mushy" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/blackolive"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:text="Black Olive" />
+                android:layout_marginStart="50dp"
+                android:text="@string/black_olive" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/jalepeno"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Jalepeno" />
+                android:text="@string/ooospicy" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/pineapple"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pineapple" />
+                android:text="@string/thebesttoppingshhhh" />
         </com.google.android.material.chip.ChipGroup>
     </LinearLayout>
 
@@ -251,21 +252,21 @@
                     android:id="@+id/textView4"
                     android:layout_width="109dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:layout_weight="1"
-                    android:text="Price = "
-                    android:textSize="45dp" />
+                    android:text="@string/price"
+                    android:textSize="45sp" />
 
                 <TextView
                     android:id="@+id/customPrice"
                     android:layout_width="175dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginEnd="20dp"
                     android:layout_weight="1"
                     android:ems="10"
                     android:text=""
                     android:textAlignment="center"
-                    android:textSize="45dp" />
+                    android:textSize="45sp" />
             </LinearLayout>
 
             <Button
@@ -274,7 +275,7 @@
                 android:layout_height="64dp"
                 android:layout_gravity="center"
                 android:enabled="false"
-                android:text="Add to Order" />
+                android:text="@string/add_to_order" />
 
             <Button
                 android:id="@+id/backtomain_button"
@@ -282,7 +283,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:backgroundTint="#ae7a47"
-                android:text="Back to Main" />
+                android:text="@string/back_to_main" />
         </LinearLayout>
     </LinearLayout>
 

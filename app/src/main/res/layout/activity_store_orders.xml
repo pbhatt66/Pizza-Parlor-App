@@ -10,7 +10,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:gravity="center"
-            android:text="Store Orders"
+            android:text="@string/store_orders"
             android:ems="10"
             android:textSize="30sp"
             android:fontFamily="serif"
@@ -23,11 +23,11 @@
             android:layout_width="match_parent"
             android:layout_height="69dp">
         <TextView
-                android:text="Order Number:"
-                android:layout_width="148dp"
+                android:text="@string/order_number"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textSize="25dp"
-                android:layout_marginLeft="30dp"
+                android:textSize="25sp"
+                android:layout_marginStart="30dp"
                 android:id="@+id/textView2" android:layout_weight="1"/>
         <Spinner
                 android:id="@+id/storeOrderSpinner"
@@ -53,24 +53,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp">
             <TextView
-                    android:text="Order Total: "
+                    android:text="@string/order_total"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="30dp" android:id="@+id/textView6"/>
+                    android:layout_marginStart="10dp"
+                    android:textSize="30sp" android:id="@+id/textView6"/>
             <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:inputType="number"
                     android:ems="10"
-                    android:textSize="30dp"
-                    android:layout_marginRight="10dp"
+                    android:textSize="30sp"
+                    android:layout_marginEnd="10dp"
                     android:id="@+id/editTextNumber2" android:layout_weight="1"/>
         </LinearLayout>
         <Button
-                android:text="Cancel Order"
+                android:text="@string/cancel_order"
+                android:textSize="20sp"
                 android:layout_width="300dp"
-                android:layout_height="81dp"
+                android:layout_height="0dp"
                 android:backgroundTint="#740005"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
@@ -82,6 +82,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:backgroundTint="#ae7a47"
-            android:text="Back to Main" />
+            android:text="@string/back_to_main" />
     </LinearLayout>
 </LinearLayout>
