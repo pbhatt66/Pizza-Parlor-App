@@ -5,6 +5,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
@@ -19,6 +21,8 @@ public class StoreOrdersActivity extends AppCompatActivity {
 
     ListView pizzasListView;
     TextView orderTotal;
+
+    Button cancelOrderButton;
 
     Spinner orders_spinner;
 
@@ -56,6 +60,9 @@ public class StoreOrdersActivity extends AppCompatActivity {
                 return;
             }
         });
+
+        cancelOrderButton = findViewById(R.id.cancelOrderButton);
+        cancelOrderButton.setOnClickListener(v -> handleCancelOrderButtonAction());
     }
 
     public void openMainActivity() {
@@ -89,6 +96,33 @@ public class StoreOrdersActivity extends AppCompatActivity {
     }
 
     private void handleCancelOrderButtonAction() {
-
+        orders_spinner = findViewById(R.id.storeOrderSpinner);
+        int orderNumber = Integer.parseInt(orders_spinner.getSelectedItem().toString());
+        Order order = storeOrders.getOrder(orderNumber);
+        if (order != null) {
+            if (order == storeOrders.getCurrentOrder()) {
+                // use an alert dialog to let user know they can't cancel the current order
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setMessage("You can't cancel the current order! Please place the order first.")
+                        .setTitle("Error");
+                AlertDialog dialog = builder.create();
+                dialog.show();
+                return;
+            }
+            storeOrders.removeFromOrders(order);
+            // update spinner
+            List<String> orderNumbers = new ArrayList<>();
+            for (Order o : storeOrders.getAllOrders()) {
+                orderNumbers.add(String.valueOf(o.getOrderNumber()));
+            }
+            ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(
+                    this,
+                    android.R.layout.simple_spinner_item,
+                    orderNumbers);
+            arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            orders_spinner.setAdapter(arrayAdapter);
+            // update list view and order total
+            updateOrderInfo();
+        }
     }
 }
