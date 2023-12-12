@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.view.View;
 import android.widget.*;
+
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -108,6 +110,15 @@ public class CurrentOrderActivity extends AppCompatActivity {
             // return to main activity
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
+        }
+        else {
+            // display alert dialog telling user to add pizzas to order
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("No Pizzas in Order");
+            builder.setMessage("Please add pizzas to your order before placing it.");
+            builder.setPositiveButton("OK", null);
+            AlertDialog dialog = builder.create();
+            dialog.show();
         }
     }
 }
