@@ -1,6 +1,8 @@
 package com.example.rupizza;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.view.View;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -61,8 +63,16 @@ public class CurrentOrderActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, pizzaStrings);
         pizzasListView = findViewById(R.id.pizzasListView);
         pizzasListView.setAdapter(adapter);
+        if (pizzasListView != null) {
+            pizzasListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    view.setBackgroundColor(Color.parseColor("#BB6634"));
+                }
+            });
+        }
 
-        orderNumber.setText(String.valueOf(storeOrders.getCurrentOrder().getOrderNumber()));
+                orderNumber.setText(String.valueOf(storeOrders.getCurrentOrder().getOrderNumber()));
         subTotal.setText(String.format("$%.2f", storeOrders.getCurrentOrder().calculateSubTotal()));
         tax.setText(String.format("$%.2f", storeOrders.getCurrentOrder().calculateTax()));
         total.setText(String.format("$%.2f", storeOrders.getCurrentOrder().calculateTotal()));
@@ -73,7 +83,6 @@ public class CurrentOrderActivity extends AppCompatActivity {
         if (storeOrders.getCurrentOrder() == null || storeOrders.getCurrentOrder().getPizzas().isEmpty()) {
             return;
         }
-
 
         int selectedPosition = pizzasListView.getCheckedItemPosition();
 
